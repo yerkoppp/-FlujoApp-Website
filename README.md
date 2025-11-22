@@ -13,7 +13,7 @@
 
 ---
 
-**[🚀 Ver Sitio Web](https://yerkoppp.github.io/-FlujoApp-Website/)** • **[📱 Repositorio App](https://github.com/yerkoppp/FlujoApp)** • **[🎥 Ver Demo](https://www.youtube.com/watch?v=EFjfT1XV9Q0)**
+**[🚀 Ver Sitio Web](https://yerkoppp.github.io/-FlujoApp-Website/)** • **[📱 Repositorio App](https://github.com/yerkoppp/FlujoApp)** • **[🎥 Ver Video](https://www.youtube.com/watch?v=EFjfT1XV9Q0)**
 
 </div>
 
@@ -23,11 +23,11 @@
 
 FlujoApp es una plataforma de gestión "todo en uno" diseñada para **pequeñas empresas de servicios en terreno**, como contratistas, técnicos de telecomunicaciones, electricistas y más.
 
-### 🎥 Demo en Video
+### 🎥 Video explicativo
 
 <div align="center">
 
-[![FlujoApp Demo](https://img.youtube.com/vi/EFjfT1XV9Q0/maxresdefault.jpg)](https://www.youtube.com/watch?v=EFjfT1XV9Q0)
+[![Flujo Video](https://img.youtube.com/vi/EFjfT1XV9Q0/maxresdefault.jpg)](https://www.youtube.com/watch?v=EFjfT1XV9Q0)
 
 **[▶️ Ver Video Completo](https://www.youtube.com/watch?v=EFjfT1XV9Q0)**
 
