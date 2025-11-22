@@ -637,6 +637,156 @@
             opacity: 0.8;
         }
 
+        /* Download Section */
+        .download-section {
+            padding: 80px 2rem;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .download-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0,188,212,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .download-card {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            padding: 3.5rem 3rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .download-icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1.5rem;
+            background: var(--gradient);
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            color: white;
+            box-shadow: 0 10px 30px rgba(0,188,212,0.3);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .download-card h3 {
+            font-size: 2.2rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .version-info {
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
+        }
+
+        .download-btn {
+            margin-bottom: 3rem;
+            font-size: 1.2rem;
+            padding: 1.2rem 3rem;
+            box-shadow: 0 8px 20px rgba(0,188,212,0.3);
+        }
+
+        .download-btn:hover {
+            box-shadow: 0 12px 30px rgba(0,188,212,0.4);
+        }
+
+        .install-instructions {
+            text-align: left;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 2.5rem;
+            border-radius: 20px;
+            margin-top: 2rem;
+            border: 2px solid rgba(0,188,212,0.1);
+        }
+
+        .install-instructions h4 {
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .install-instructions ol {
+            margin-left: 0;
+            padding-left: 0;
+            list-style: none;
+            counter-reset: step-counter;
+        }
+
+        .install-instructions li {
+            margin-bottom: 1.2rem;
+            padding-left: 3rem;
+            position: relative;
+            counter-increment: step-counter;
+            line-height: 1.8;
+        }
+
+        .install-instructions li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 32px;
+            height: 32px;
+            background: var(--gradient);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .install-instructions strong {
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+
+        .warning-note {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            border-left: 5px solid #FF9800;
+            padding: 1.3rem 1.5rem;
+            margin-top: 2rem;
+            border-radius: 12px;
+            font-size: 1rem;
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+            box-shadow: 0 4px 12px rgba(255,152,0,0.15);
+        }
+
+        .warning-note i {
+            color: #FF9800;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
         /* Animations */
         @keyframes fadeInUp {
             from {
@@ -675,7 +825,31 @@
             .screenshot-card {
                 flex: 0 0 250px;
             }
+            .download-card {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .download-icon {
+                width: 100px;
+                height: 100px;
+                font-size: 3rem;
+            }
+
+            .download-card h3 {
+                font-size: 1.8rem;
+            }
+
+            .install-instructions {
+                padding: 2rem 1.5rem;
+            }
+
+            .install-instructions li {
+                padding-left: 2.5rem;
+                font-size: 0.95rem;
+            }
         }
+
+
     </style>
 </head>
 <body>
@@ -688,6 +862,7 @@
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#video">Demo</a></li>
+                <li><a href="#descargar">Descargar</a></li>
                 <li><a href="#problemas">Problemas</a></li>
                 <li><a href="#caracteristicas">Características</a></li>
                 <li><a href="#tecnologia">Tecnología</a></li>
@@ -724,6 +899,40 @@
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                         allowfullscreen>
                     </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="download-section" id="descargar">
+        <div class="container">
+            <h2 class="section-title">📱 Descarga FlujoApp</h2>
+            <p class="section-subtitle">Prueba la versión beta en tu dispositivo Android</p>
+            
+            <div class="download-card">
+                <div class="download-icon">
+                    <i class="fab fa-android"></i>
+                </div>
+                <h3>FlujoApp para Android</h3>
+                <p class="version-info">Versión Beta 1.0 • APK disponible</p>
+                
+                <a href="apk/flujo_install.apk" class="btn btn-primary download-btn" download>
+                    <i class="fas fa-download"></i> Descargar APK
+                </a>
+                
+                <div class="install-instructions">
+                    <h4>📋 Instrucciones de instalación:</h4>
+                    <ol>
+                        <li><strong>Descarga el archivo APK</strong> haciendo clic en el botón superior</li>
+                        <li><strong>Habilita fuentes desconocidas:</strong> Ve a Configuración → Seguridad → Permitir instalación desde fuentes desconocidas</li>
+                        <li><strong>Abre el archivo descargado</strong> desde las notificaciones o tu carpeta de Descargas</li>
+                        <li><strong>Toca "Instalar"</strong> y espera a que se complete el proceso</li>
+                        <li><strong>¡Listo!</strong> Abre FlujoApp desde tu pantalla de inicio</li>
+                    </ol>
+                    <p class="warning-note">
+                        <i class="fas fa-exclamation-triangle"></i> 
+                        <strong>Nota:</strong> Esta es una versión beta. Algunos errores pueden ocurrir durante el uso.
+                    </p>
                 </div>
             </div>
         </div>
